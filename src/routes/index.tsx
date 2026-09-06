@@ -176,16 +176,27 @@ function Index() {
               <figure key={i}>
                 <div className="relative overflow-hidden rounded-lg">
                   {it.video ? (
-        <video 
-          src={it.video} 
-          autoPlay 
-          loop 
-          muted 
-          playsInline 
-          width={640}
-          height={640}
-          className="aspect-square w-full scale-110 object-cover blur-lg"
-        />
+        {/* No vídeo */}
+<video
+  src={it.video}
+  autoPlay
+  loop
+  muted
+  playsInline
+  width={640}
+  height={640}
+  className="aspect-square w-full scale-110 object-cover"
+/>
+
+{/* Na imagem (se cair no else) */}
+<img
+  src={it.img}
+  alt=""
+  loading="lazy"
+  width={640}
+  height={640}
+  className="aspect-square w-full scale-110 object-cover"
+/>
       ) : (
         <img 
           src={it.img}
